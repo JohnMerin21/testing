@@ -1,0 +1,35 @@
+// Updated guitars.json
+{
+    "guitars": [
+        {
+            "brand": "Fender",
+            "model": "Stratocaster",
+            "type": "Electric",
+            "image": "fender_players_strat_mn_polar_white_front.jpg",
+            "description": "The Fender Stratocaster is a versatile electric guitar known for its iconic design and smooth playability. It has been a favorite among musicians in various genres.",
+            "year": 1954,
+            "price": "$1,499.99",
+            "manufacturerLink": "https://www.fender.com/"
+        },
+        {
+            "brand": "Gibson",
+            "model": "Les Paul",
+            "type": "Electric",
+            "image": "gibson_les_paul.jpg",
+            "description": "The Gibson Les Paul is a classic electric guitar with a rich, warm tone. It is often associated with rock and blues music and has a solid mahogany body.",
+            "year": 1952,
+            "price": "$2,799.00",
+            "manufacturerLink": "https://www.gibson.com/"
+        },
+        {
+            "brand": "Taylor",
+            "model": "814ce",
+            "type": "Acoustic",
+            "image": "814ce",
+            "description": "The Taylor 814ce is an acoustic guitar known for its high-quality craftsmanship and exceptional sound. It features a solid spruce top and rosewood back and sides.",
+            "year": 1994,
+            "price": "$3,499.00",
+            "manufacturerLink": "https://www.taylorguitars.com/"
+        }
+    ]
+}

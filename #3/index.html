@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Information</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .guitar {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        .guitar img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .manufacturer-link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+    <h1>Guitar Information</h1>
+
+    <div id="guitarList"></div>
+
+    <script>
+        // Inline JSON data with actual artist images and descriptions
+        const jsonData = {
+            "guitars": [
+                {
+                    "brand": "Fender",
+                    "model": "Stratocaster",
+                    "type": "Electric",
+                    "image": "fender_players_strat_mn_polar_white_front.jpg",
+                    "description": "The Fender Stratocaster is a versatile electric guitar known for its iconic design and smooth playability. It has been a favorite among musicians in various genres.",
+                    "year": 1954,
+                    "price": "$1,499.99",
+                    "manufacturerLink": "https://www.fender.com/"
+                },
+                {
+                    "brand": "Gibson",
+                    "model": "Les Paul",
+                    "type": "Electric",
+                    "image": "gibson_les_paul.jpg",
+                    "description": "The Gibson Les Paul is a classic electric guitar with a rich, warm tone. It is often associated with rock and blues music and has a solid mahogany body.",
+                    "year": 1952,
+                    "price": "$2,799.00",
+                    "manufacturerLink": "https://www.gibson.com/"
+                },
+                {
+                    "brand": "Taylor",
+                    "model": "814ce",
+                    "type": "Acoustic",
+                    "image": "814ce",
+                    "description": "The Taylor 814ce is an acoustic guitar known for its high-quality craftsmanship and exceptional sound. It features a solid spruce top and rosewood back and sides.",
+                    "year": 1994,
+                    "price": "$3,499.00",
+                    "manufacturerLink": "https://www.taylorguitars.com/"
+                }
+            ]
+        };
+
+        // Display data
+        let output = '';
+        $.each(jsonData.guitars, function(index, guitar) {
+            output += `<div class="guitar">
+                            <h2>${guitar.brand} ${guitar.model}</h2>
+                            <p>Type: ${guitar.type}</p>
+                            <img src="${guitar.image}" alt="${guitar.brand} ${guitar.model}">
+                            <p>${guitar.description}</p>
+                            <p>Year: ${guitar.year}</p>
+                            <p>Price: ${guitar.price}</p>
+                            <a class="manufacturer-link" href="${guitar.manufacturerLink}" target="_blank">Manufacturer's Website</a>
+                        </div>`;
+        });
+        $('#guitarList').html(output);
+    </script>
+
+</body>
+</html>
+
